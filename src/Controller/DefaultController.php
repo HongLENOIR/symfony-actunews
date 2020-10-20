@@ -43,8 +43,10 @@ class DefaultController
      *  Page / Action : Article
      *  Permet d'afficher un article du site
      * @Route("/{category}/{alias}_{id}.html", name="default_article", methods={"GET"})
+     * method comme GET ou POST d'autoriser pour la route
+     * si l'on veut récupérer les variables (propriétés), mets dans la fonction sans l'ordre mais avec le meme nom
      */
-    public function article()
+    public function article($id, $category, $alias)
     {
         # URL: https://localhost:8000/politique/couvre-feu-quand-la-situation-sanitaire-s-ameliorera-t-elle_14155614.html
         #3 parametre: categorie, alias(le titre d'article), _id.html

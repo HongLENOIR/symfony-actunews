@@ -157,7 +157,8 @@
       <workItem from="1603101745882" duration="1911000" />
       <workItem from="1603104813795" duration="3253000" />
       <workItem from="1603112348226" duration="215000" />
-      <workItem from="1603112586444" duration="7219000" />
+      <workItem from="1603112586444" duration="8074000" />
+      <workItem from="1603181142532" duration="13549000" />
     </task>
     <servers />
   </component>
@@ -165,6 +166,10 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="1112" y="416" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1603184059425">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1112" y="416" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1603184059425" />
     <state x="1308" y="363" key="NewPhpClassDialog" timestamp="1603113736695">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
