@@ -6,6 +6,7 @@ use App\Repository\PostRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass=PostRepository::class)
@@ -21,21 +22,26 @@ class Post
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank(message="Vous avez oublié le titre.")
      */
     private $title;
 
     /**
      * @ORM\Column(type="string", length=255)
+     *
      */
     private $alias;
 
     /**
      * @ORM\Column(type="text")
+     * @Assert\NotBlank(message="Vous avez oublié le contenu.")
      */
     private $content;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\Image(mimeTypesMessage="Vérifiez le format de votre image",
+     *              maxSize="2M", maxSizeMessage="Votre image est trop lourde.")
      */
     private $featuredImage;
 

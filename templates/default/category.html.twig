@@ -1,0 +1,53 @@
+{% extends "base.html.twig" %}
+{% block body %}
+    {#  {{ dump(app.request }}#}
+    {#  {{ dump(app.request.get('alias')) }}#}
+
+    <!-- .p-3.mx-auto.text-center>h1.display-4{ActuNews} + tape-->
+    <div class="p-3 mx-auto text-center">
+        <h1 class="display-4">{{ app.request.get('alias') | title}}</h1>
+    </div>
+    <!--.py-5.bg-light>.container>.row>.col-md-4.mt-4 +tape -->
+    <div class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mt-4">
+                    <div class="card" shadow-sm;">
+                    <img src="https://via.placeholder.com/200x150" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Lire l'article</a>
+                    </div><!-- /.card-body-->
+                </div> <!-- /.card-->
+            </div><!-- /.col-md-4-->
+            <div class="col-md-4 mt-4">
+                <div class="card" shadow-sm;">
+                <img src="https://via.placeholder.com/200x150" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Lire l'article</a>
+                </div><!-- /.card-body-->
+            </div> <!-- /.card-->
+        </div><!-- /.col-md-4-->
+        <div class="col-md-4 mt-4">
+            <div class="card" shadow-sm;">
+            <img src="https://via.placeholder.com/200x150" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Lire l'article</a>
+            </div><!-- /.card-body-->
+        </div> <!-- /.card-->
+    </div><!-- /.col-md-4-->
+
+    </div><!-- /.row-->
+    </div><!-- /.container-->
+    </div><!-- /.py-5-->
+
+{% endblock %}
+
+
+
+

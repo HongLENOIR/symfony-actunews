@@ -3,6 +3,6 @@ index: # Je choisis le nom de ma route ./!\ pas de doublon.
     controller: App\Controller\DefaultController::index
 
 contact:
-    path: /contact
+    path: /page/contact
     controller: App\Controller\DefaultController::contact
 

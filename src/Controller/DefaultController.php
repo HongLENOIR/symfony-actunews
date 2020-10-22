@@ -4,18 +4,24 @@
 namespace App\Controller;
 
 
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class DefaultController
+class DefaultController extends AbstractController
 {
     /**
      *  Page / Action : Accueil
      */
     public function index()
     {
-        return new Response('<h1>Page Accueil</h1>');
+        return $this->render('default/index.html.twig');
     }
+    # toutes les fonctions disponibles grace a l'AbstractController. En POO, le mot clé 'extends' permet mettre en place de héritage de la class (ici AbstractController parent, enfant DefaultController), la meme principe, grace à l'heritage, $this accede tous les propriétés (public et protected) de class
+    #si public, accéder les propriétés des parents et les enfants, si private ou protected, interdit de classe enfant accéder les propriétés de class des parents
+    #toutes les classes abstract, pas vocation d'étre instantiable en raison d'etre hérité, juste pour aider ou soutenir d'autres class, une classe d'héritage qu'un classe abstract, pas plusieurs en meme temps! mais en serie d'heritage, A par B, B héritage de C
+    #symfony créer une protected function render (...) pour rendu la vue twig
+
 
     /**
      *  Page / Action : Contact
@@ -23,7 +29,7 @@ class DefaultController
 
     public function contact()
     {
-        return new Response('<h1>Page Contact</h1>');
+        return $this->render('default/contact.html.twig');
     }
 
     /**
@@ -36,23 +42,24 @@ class DefaultController
     public function category($alias)
     {
 
-        return new Response("<h1>Page $alias</h1>");
-
-    }
-    /**
-     *  Page / Action : Article
-     *  Permet d'afficher un article du site
-     * @Route("/{category}/{alias}_{id}.html", name="default_article", methods={"GET"})
-     * method comme GET ou POST d'autoriser pour la route
-     * si l'on veut récupérer les variables (propriétés), mets dans la fonction sans l'ordre mais avec le meme nom
-     */
-    public function article($id, $category, $alias)
-    {
-        # URL: https://localhost:8000/politique/couvre-feu-quand-la-situation-sanitaire-s-ameliorera-t-elle_14155614.html
-        #3 parametre: categorie, alias(le titre d'article), _id.html
-        return new Response("<h1>Page Article</h1>");
+        return $this->render('default/category.html.twig');
     }
 
-}
+        /**
+         *  Page / Action : Article
+         *  Permet d'afficher un article du site
+         * @Route("/{category}/{alias}_{id}.html", name="default_article", methods={"GET"})
+         * method comme GET ou POST d'autoriser pour la route
+         * si l'on veut récupérer les variables (propriétés), mets dans la fonction sans l'ordre mais avec le meme nom
+         */
+        public
+        function article($id, $category, $alias)
+        {
+            # URL: https://localhost:8000/politique/couvre-feu-quand-la-situation-sanitaire-s-ameliorera-t-elle_14155614.html
+            #3 parametre: categorie, alias(le titre d'article), _id.html
+            return $this->render('default/post.html.twig');
+        }
+
+    }
 
 

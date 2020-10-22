@@ -2,8 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fd3856b1-dbb9-454f-9115-23a76a77bc1f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Controller/DefaultController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/PostController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/components/_nav.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/default/category.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/default/contact.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/default/index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/default/post.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/post/create.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/twig.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/twig.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/DefaultController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/DefaultController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,7 +152,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../E-Shop" />
     <property name="settings.editor.selected.configurable" value="Symfony2.SettingsForm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -158,7 +169,10 @@
       <workItem from="1603104813795" duration="3253000" />
       <workItem from="1603112348226" duration="215000" />
       <workItem from="1603112586444" duration="8074000" />
-      <workItem from="1603181142532" duration="13549000" />
+      <workItem from="1603181142532" duration="14169000" />
+      <workItem from="1603268451997" duration="17902000" />
+      <workItem from="1603352725053" duration="15000" />
+      <workItem from="1603352822583" duration="20408000" />
     </task>
     <servers />
   </component>
@@ -170,10 +184,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1112" y="416" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1603184059425" />
-    <state x="1308" y="363" key="NewPhpClassDialog" timestamp="1603113736695">
+    <state x="1317" y="236" key="FileChooserDialogImpl" timestamp="1603352954571">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1308" y="363" key="NewPhpClassDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1603113736695" />
+    <state x="1317" y="236" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1603352954570" />
+    <state x="1308" y="363" key="NewPhpClassDialog" timestamp="1603353268889">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1308" y="363" key="NewPhpClassDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1603353268889" />
     <state x="922" y="326" key="SettingsEditor" timestamp="1603112301653">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
