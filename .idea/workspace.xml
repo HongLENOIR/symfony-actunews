@@ -2,19 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fd3856b1-dbb9-454f-9115-23a76a77bc1f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Controller/PostController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/components/_nav.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/default/category.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/default/contact.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/default/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/default/post.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/post/create.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/UserController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/user/create.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/twig.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/twig.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/DefaultController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/DefaultController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Post.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/PostController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/components/_nav.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/components/_nav.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,7 +148,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../E-Shop" />
-    <property name="settings.editor.selected.configurable" value="Symfony2.SettingsForm" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -172,7 +167,8 @@
       <workItem from="1603181142532" duration="14169000" />
       <workItem from="1603268451997" duration="17902000" />
       <workItem from="1603352725053" duration="15000" />
-      <workItem from="1603352822583" duration="20408000" />
+      <workItem from="1603352822583" duration="21006000" />
+      <workItem from="1603438678336" duration="19307000" />
     </task>
     <servers />
   </component>
@@ -188,13 +184,29 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1317" y="236" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1603352954570" />
-    <state x="1308" y="363" key="NewPhpClassDialog" timestamp="1603353268889">
+    <state x="1308" y="363" key="NewPhpClassDialog" timestamp="1603441870018">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1308" y="363" key="NewPhpClassDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1603353268889" />
-    <state x="922" y="326" key="SettingsEditor" timestamp="1603112301653">
+    <state x="1308" y="363" key="NewPhpClassDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1603441870018" />
+    <state x="922" y="326" key="SettingsEditor" timestamp="1603459873579">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="922" y="326" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1603112301653" />
+    <state x="922" y="326" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1603459873579" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/src/Controller/PostController.php</url>
+          <line>52</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/src/Security/AppLoginAuthenticator.php</url>
+          <line>88</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
