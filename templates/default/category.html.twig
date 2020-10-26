@@ -11,39 +11,23 @@
     <div class="py-5 bg-light">
         <div class="container">
             <div class="row">
-                <div class="col-md-4 mt-4">
-                    <div class="card" shadow-sm;">
-                    <img src="https://via.placeholder.com/200x150" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Lire l'article</a>
-                    </div><!-- /.card-body-->
-                </div> <!-- /.card-->
-            </div><!-- /.col-md-4-->
-            <div class="col-md-4 mt-4">
-                <div class="card" shadow-sm;">
-                <img src="https://via.placeholder.com/200x150" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Lire l'article</a>
-                </div><!-- /.card-body-->
-            </div> <!-- /.card-->
-        </div><!-- /.col-md-4-->
-        <div class="col-md-4 mt-4">
-            <div class="card" shadow-sm;">
-            <img src="https://via.placeholder.com/200x150" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Lire l'article</a>
-            </div><!-- /.card-body-->
-        </div> <!-- /.card-->
-    </div><!-- /.col-md-4-->
-
-    </div><!-- /.row-->
-    </div><!-- /.container-->
+                {% for post in posts %}
+                    <div class="col-md-4 mt-4">
+                        <div class="card shadow-sm">
+                            <img src="{{ asset('uploads/images/' ~ post.featuredImage) }}" alt="{{ post.title }}" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ post.title }}</h5>
+                                <a href="{{ path('default_article',{
+                                    'category': post.category.alias,
+                                    'alias': post.alias,
+                                    'id': post.id
+                                }) }}" class="btn btn-primary">Lire l'article</a>
+                            </div><!-- /.card-body-->
+                        </div> <!-- /.card-->
+                    </div><!-- /.col-md-4-->
+                {% endfor %}
+            </div><!-- /.row-->
+        </div><!-- /.container-->
     </div><!-- /.py-5-->
 
 {% endblock %}

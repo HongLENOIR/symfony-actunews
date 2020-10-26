@@ -1,4 +1,14 @@
 {% extends "base.html.twig" %}
 {% block body %}
-    <h1>Page d'Article</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-18 mx-auto">
+                <div class="jumbotron mt-4">
+                    <h1 class="display-4">{{post.title}}</h1>
+                    <img src="{{ asset('uploads/images/' ~ post.featuredImage) }}" alt="{{ post.title }}" class="card-img-top">
+                   {{ post.content|raw }}
+                </div>
+             </div>
+         </div>
+    </div>
 {% endblock %}

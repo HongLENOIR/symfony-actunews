@@ -28,16 +28,14 @@ class PostController extends AbstractController
      * @Route("/article/creer-un-article", name="post_create", methods={"GET|POST"})
      * @IsGranted("ROLE_JOURNALIST")
      */
-    public function createPost(Request $request, SluggerInterface $slugger )
+    public function createPost(Request $request, SluggerInterface $slugger)
     {
         #1a. Création d'un nouveau Post
         $post = new Post();
 
         #1b. Attribution d'un user
-        # FIXME Temporaire
-        $user = $this->getDoctrine()
-            ->getRepository(User::class)
-            ->find(1);
+        $user = $this->getUser(); // ce que connexion est le user de créer l'article
+
         $post->setUser($user);
 
         #1c. Ajouter de la date de rédaction
@@ -50,31 +48,31 @@ class PostController extends AbstractController
             ->add('title', TextType::class)
 
             #2b. Categorie de l'article (Liste déroulante)
-            ->add('category', EntityType::class,[
-                    // looks for choices from this entity
-                    'class' => Category::class,
-                    // uses the User.username property as the visible option string
-                    'choice_label' => 'name',
-                    // used to render a select box, check boxes or radios
-                    // 'multiple' => true,
-                    // 'expanded' => true,
-                ])
+            ->add('category', EntityType::class, [
+                // looks for choices from this entity
+                'class' => Category::class,
+                // uses the User.username property as the visible option string
+                'choice_label' => 'name',
+                // used to render a select box, check boxes or radios
+                // 'multiple' => true,
+                // 'expanded' => true,
+            ])
             #2c. Contenu de l'article
-            ->add('content',TextareaType::class)
+            ->add('content', TextareaType::class)
 
             #2d. Upload Image de l'article
-            ->add('featuredImage',FileType::class)
+            ->add('featuredImage', FileType::class)
 
             #2e. Boutton Submit de l'article
-            ->add('submit',SubmitType::class)
+            ->add('submit', SubmitType::class)
             #2f. #Permet de récupérer le formulaire généré
-        ->getForm();
+            ->getForm();
 
         #3. Demande à Symfony de récupérer les infos dans la request.
         $form->handleRequest($request);
 
         #4. Véfifie si le formulaire est soumis et valide
-        if ($form->isSubmitted() && $form->isValid()){
+        if ($form->isSubmitted() && $form->isValid()) {
 //            dump($request);
 //            dd($post);    pour vérifier les infos
 
@@ -89,7 +87,7 @@ class PostController extends AbstractController
                 // this is needed to safely include the file name as part of the URL
                 $safeFilename = $slugger->slug($originalFilename); // slugger pour notre projet comme alias
                 $newFilename = $safeFilename . '-' . uniqid() . '.' . $featuredImage->guessExtension();
-                    # cette ligne pour que nom de fichier est sécurisé
+                # cette ligne pour que nom de fichier est sécurisé
                 // Move the file to the directory where brochures are stored
                 try {
                     $featuredImage->move(
@@ -119,23 +117,23 @@ class PostController extends AbstractController
              * C'est une classses qui sait comment sauvegarder d'autres classes
              */
 
-            $em =$this->getDoctrine()->getManager(); # Récupération du EM
+            $em = $this->getDoctrine()->getManager(); # Récupération du EM
             $em->persist($post); #Demande pour sauvegarder en BDD $post
             $em->flush(); # On execute la demande
 
             #4d. Notification / Confirmation
-            $this->addFlash('notice','Votre article est en ligne!');
+            $this->addFlash('notice', 'Votre article est en ligne!');
 
             #4e. Redirection
             return $this->redirectToRoute('default_article', [
-             'category'=>$post->getCategory()->getAlias(),
-                'alias'=>$post->getAlias(),
-                'id'=>$post->getId()
-                ]);
+                'category' => $post->getCategory()->getAlias(),
+                'alias' => $post->getAlias(),
+                'id' => $post->getId()
+            ]);
         }
 
         #5. Transmission du formulaire à la vue
-        return $this->render('post/create.html.twig',[
+        return $this->render('post/create.html.twig', [
             'form' => $form->createView()
         ]);
     }
